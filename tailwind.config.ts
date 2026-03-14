@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "log-error": "hsl(var(--log-error))",
+        "log-warn": "hsl(var(--log-warn))",
+        "log-info": "hsl(var(--log-info))",
+        "surface-hover": "hsl(var(--surface-hover))",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",
