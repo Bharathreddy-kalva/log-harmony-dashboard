@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  BASE_URL: "http://localhost:8083",
+  BASE_URL: "https://nondigestive-glenn-nongelatinizing.ngrok-free.dev",
   ENDPOINTS: {
     LOGS: "/api/logs",
     SEARCH: "/api/logs/search",
