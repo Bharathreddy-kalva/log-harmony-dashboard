@@ -1,7 +1,13 @@
 import { NavLink } from "@/components/NavLink";
 import { LayoutDashboard, List } from "lucide-react";
+import { AlertBell } from "@/components/AlertBell";
+import { useLogs } from "@/hooks/use-logs";
+import { useMemo } from "react";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
+  const { data: logs = [] } = useLogs();
+  const errorAlerts = useMemo(() => logs.filter((l) => l.level === "ERROR"), [logs]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top nav */}
@@ -29,6 +35,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               Logs
             </NavLink>
           </nav>
+          <div className="ml-auto">
+            <AlertBell alerts={errorAlerts} />
+          </div>
         </div>
       </header>
 
